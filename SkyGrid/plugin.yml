@@ -1,0 +1,7 @@
+name: SkyGrid
+author: Asecave
+version: 1.0
+load: STARTUP
+api-version: 1.16
+main: com.asecave.SkyGrid
+commands:
