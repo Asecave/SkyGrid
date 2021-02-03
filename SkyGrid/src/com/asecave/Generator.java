@@ -240,20 +240,19 @@ public class Generator extends ChunkGenerator {
 
 					} else if (world.getEnvironment() == Environment.THE_END) {
 						if (y >= 20 && y <= 70) {
+							data.setBlock(x, y, z, Material.END_STONE);
 							if (Math.abs(cx) > 8 || Math.abs(cz) > 8) {
 								if (random.nextFloat() < 0.5f) {
-									data.setBlock(x, y, z, Material.END_STONE);
-									if (Math.abs(cx) > 63 || Math.abs(cz) > 63) {
-										if (random.nextFloat() < 0.01f) {
-											data.setBlock(x, y, z, Material.PURPUR_BLOCK);
-										} else if (random.nextFloat() < 0.005f) {
-											data.setBlock(x, y + 1, z, Material.CHORUS_FLOWER);
-										}
-									}
+									data.setBlock(x, y, z, Material.AIR);
 								}
 							}
-						} else {
-							data.setBlock(x, y, z, Material.END_STONE);
+							if (Math.abs(cx) > 63 || Math.abs(cz) > 63) {
+								if (random.nextFloat() < 0.01f) {
+									data.setBlock(x, y, z, Material.PURPUR_BLOCK);
+								} else if (random.nextFloat() < 0.005f) {
+									data.setBlock(x, y + 1, z, Material.CHORUS_FLOWER);
+								}
+							}
 						}
 					}
 				}
